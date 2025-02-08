@@ -1,0 +1,32 @@
+body {
+    text-align: center;
+    color: #ffff;
+    font-family: "Happy Monkey", serif;
+    background-color: #a2d2ff;
+}
+
+#nickImage {
+    width: 350;
+    border-radius: 50%;
+    border: 6px solid #EFB0C9;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    text-shadow: 1px 1px 1px black;
+}
+
+h2,
+h4 {
+    background: #EFB0C9;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
