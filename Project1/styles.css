@@ -19,14 +19,52 @@ p {
     text-shadow: 1px 1px 1px black;
 }
 
-h2,
-h4 {
+#bday-age,
+#bday-date {
     background: #EFB0C9;
+    padding: 5px 10px;
+    border-radius: 8px;
 }
+
+#bday-age {
+    margin-bottom: 5px;
+}
+
+#bday-date {
+    margin-top: 5px;
+}
+
 
 #header {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
+}
+
+.gift-section {
+    margin-top: 50px;
+}
+
+.gift-title {
+    margin-bottom: 10px;
+}
+
+.gift-hint {
+    margin: 0px;
+}
+
+.gift-img {
+    width: 400px;
+    height: 400px;
+    background-image: url("gift-cover.jpg");
+    background-size: cover;
+    border: 5px solid white;
+    border-radius: 5px;
+    margin: 30px auto 0px auto;
+
+}
+
+.gift-img:hover {
+    background-image: url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGNxNmY1aWhydGpqazRwYW5vbmhwb2V6eGVpcm1zZXJ4NTAxNm8xYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SwIMZUJE3ZPpHAfTC4/giphy.gif");
 }
