@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+   width: 100%;
+   min-height: 100vh;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+    max-width: 1440px;
+    min-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Inter", serif;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+#backgroundContainer { 
+    width: 100%;
+    min-height: 100vh; /* Full height */
+    /* background-color: hsl(0, 0%, 20%); */
+    background-color: #141414; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+#mainDiv {
+    width: fit-content;
+    height: fit-content;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #1F1F1F;
+}
+
+#imgDiv img {
+    border-radius: 50%;
+}
+
+#imgDiv
+{
+    margin-bottom: 20px;
+}
+
+#profileTitle
+{
+    margin: 10px 50px;
+}
+#profileTitle h1,h3
+{
+    color : hsl(0, 0%, 100%);
+    margin-bottom: 8px;
+}
+
+#profileTitle h2
+{
+    color : hsl(75, 94%, 57%);
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+#InputButtons
+{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.myButton
+{
+    width: 100%;
+    max-width: 500px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    background-color: #333333;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.myButton:hover
+{
+    background-color:  hsl(75, 94%, 57%);
+}
