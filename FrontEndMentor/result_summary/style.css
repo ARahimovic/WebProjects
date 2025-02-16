@@ -1,0 +1,226 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    min-width: 320px;
+    height: 100vh;
+    width: 100%;
+    background-color:hsl(221, 100%, 96%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Hanken Grotesk", serif;
+    font-style: normal;
+    font-size: 18px;
+}
+
+p
+{
+    font-size: clamp(14px, 2vw, 20px);
+}
+
+h1
+{
+    font-size: clamp(20px,6vw,32px);
+}
+
+h2
+{
+    font-size: clamp(18px,3vw,24px);
+}
+
+
+#mainContainer
+{
+    /* limit the max width to 700 px , so even for larger screen that the max */
+    max-width: 1000px; 
+    width: 90%; 
+    height: 80%;
+    max-height: 750px;
+    
+    /* it will take 90% of the screen, unless it reach 700px
+    so for small screens like phones it takes 90% */
+    display: flex;
+    border-radius: 15px;
+    background-color:  hsl(0, 0%, 100%);
+    text-shadow: 0px 0px 3px rgba(0,0,0,0.1);
+}
+
+#column1 , #column2
+{
+    flex: 1 1 50%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 15px;
+    padding: 40px;
+   
+}
+
+#column1
+{
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsla(256, 72%, 46%, 0.9));
+    /* background-color: hsla(256, 72%, 46%, 0.9); */
+    text-align: center;
+    align-items: center;
+    color:hsl(241, 100%, 89%);
+}
+
+#column2
+{ 
+    background-color:  hsl(0, 0%, 100%);
+    color: black;
+
+}
+
+#circle
+{
+    min-width: 120px;
+    min-height: 120px;
+
+    max-width: 300;
+    max-height: 300px;
+
+    width : 70%;
+    aspect-ratio: 1;
+    /* height: 50%; */
+    border-radius: 50%;
+    background-image : linear-gradient( hsla(256, 72%, 46%, 0.9), hsl(241, 81%, 54%));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+#totalScore h1
+{
+    margin: 0;
+    padding: 0;
+    font-size: clamp(30px,8vw,80px);
+    line-height: 1;
+    color: white;
+}
+
+#finishTouch h1
+{
+    color: white;
+    margin-bottom: 20px;
+}
+
+#scores
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+.scoreItem
+{
+    display: flex;
+    gap: 15px;
+    border-radius: 15px;
+    padding: 20px 15px;
+}
+
+.lastElement
+{
+    margin-left: auto;
+}
+
+
+.score
+{
+    color: black;
+}
+.total
+{
+    color: grey;
+}
+
+
+#Reaction
+{
+    color: hsl(0, 100%, 67%);
+    background-color: hsla(0, 100%, 67%,0.1);
+}
+
+
+#Memory
+{
+    color: hsl(39, 100%, 56%);
+    background-color:  hsla(39, 100%, 56%,0.1);
+}
+
+
+#Verbal
+{
+    color: hsl(166, 100%, 37%);
+    background-color: hsla(166, 100%, 37%,0.1);
+}
+
+
+#Visual
+{
+    color: hsl(234, 85%, 45%);
+    background-color: hsla(234, 85%, 45%,0.1);
+}
+
+.myButton
+{
+    width: 100%;
+    max-width: 500px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    background-color: #333333;
+    border-radius: 30px;
+    font-size: 24px;
+    font-weight: bold;
+  
+}
+
+.myButton:hover
+{
+    background-color:  hsl(252, 100%, 67%);
+    text-decoration: none ;
+}
+
+@media (max-width : 600px)
+{
+    #mainContainer
+    {
+        flex-wrap: wrap;
+    }
+
+    #column1
+    {
+        flex : 1 1 100%;
+        
+    }
+
+    
+    #column2
+    {
+        flex : 1 1 100%;
+    }
+
+    #totalScore h1
+    {
+        
+        font-size: clamp(30px,20vh,80px);
+    }
+
+
+
+
+}
