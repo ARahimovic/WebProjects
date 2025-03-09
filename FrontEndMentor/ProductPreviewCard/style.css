@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    height: 100vh;
+    width: 100%;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainContainer {
+    width: 90%;
+    height: 80%;
+    max-width: 1000px;
+    max-height: 600px;
+    background-color: white;
+    display: flex;
+    border-radius: 20px;
+    /* overflow: hidden;  */
+    box-shadow: 10 5px 5px black;
+}
+
+#column1 {
+    background-image: url("image-product-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Fixed typo from 'none' to 'no-repeat' */
+    flex: 1 1 50%;
+    height: 100%;
+    min-width: 0;
+    border-radius: 20px 0 0 20px;
+}
+
+#column2 {
+    background-color: hsl(0, 0%, 100%);
+    flex: 1 1 50%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 0px 20px 20px 0px;
+    height: 100%;
+    padding: 20px 0 40px; /* Added padding to prevent content from touching edges */
+}
+
+#insideCol {
+    flex: 1 1 auto; /* Changed from 100% to auto */
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start; /* Changed from start to flex-start for better compatibility */
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    gap: 20px;
+    overflow: auto; /* Changed from hidden to auto to allow scrolling if needed */
+}
+
+#category {
+    margin-top: 0; /* Changed from 20px to 0 since we added padding to column2 */
+    font-size: 20px;
+    letter-spacing: 6px;
+    color: rgb(99, 92, 92);
+}
+
+#title {
+    font-family: "Fraunces", serif;
+    width: 70%; /* Changed from 70% to 100% for better mobile layout */
+    font-size: 40px;
+    margin-bottom: 15px; /* Reduced from 30px */
+}
+
+#description {
+    font-size: 25px;
+    margin-bottom: 15px; /* Reduced from 20px */
+}
+
+#price {
+    font-size: 30px;
+    color: hsl(158, 36%, 37%);
+    margin-bottom: 15px; /* Reduced from 20px */
+}
+
+#price #smallPrice {
+    font-size: 20px;
+    color: hsl(30, 5%, 59%);
+    text-decoration: line-through;
+    text-align: center;
+}
+
+.myButton {
+    max-width: 500px;
+    width: 100%;
+    height: 60px;
+    color: white;
+    background-color: hsl(158, 36%, 37%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 25px;
+    text-decoration: none;
+    margin-top: auto; /* Push button to bottom of available space */
+}
+
+.cartIcon {
+    width: 25px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.myButton:hover {
+    text-decoration: none;
+    background-color: hsl(160, 36%, 25%);
+}
+
+@media (max-width: 800px) {
+    #mainContainer {
+        flex-direction: column; /* Changed from flex-wrap to flex-direction for better control */
+        height: auto; /* Allow container to adjust based on content */
+        max-height: 90vh; /* Limit maximum height on mobile */
+    }
+
+    #column1 {
+        flex: 0 0 50%; /* Fixed height proportion */
+        min-height: 200px; /* Minimum height */
+        background-image: url("image-product-mobile.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 20px 20px 0 0;
+    }
+
+    #column2 {
+        flex: 0 0 50%; /* Fixed height proportion */
+        border-radius: 0 0 20px 20px; /* Fixed border radius */
+        padding: 15px 0; /* Reduced padding on mobile */
+    }
+
+    #insideCol {
+        height: 100%;
+        gap: 10px; /* Reduced gap on mobile */
+    }
+
+    #title {
+        font-size: 30px; /* Smaller font on mobile */
+        margin-bottom: 10px;
+    }
+
+    #description {
+        font-size: 18px; /* Smaller font on mobile */
+    }
+
+    #price {
+        font-size: 25px; /* Smaller font on mobile */
+    }
+
+    .myButton {
+        height: 50px; /* Smaller button height */
+        font-size: 20px; /* Smaller font */
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    #insideCol {
+        width: 90%; /* Wider content area on very small screens */
+    }
+    
+    #title {
+        font-size: 24px;
+    }
+    
+    #description {
+        font-size: 16px;
+    }
+}
