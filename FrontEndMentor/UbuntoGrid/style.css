@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: hsl(30, 14%, 86%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gridContainer {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(50px, 1fr));
+    grid-template-rows: repeat(6, minmax(50px, 1fr));
+
+    gap: 15px;
+    width: 80%;
+    height: 80%;
+    border: 1px solid black;
+    max-width: 1400px;
+    max-height: 800px;
+
+    grid-template-areas:
+        "c c c sm sm sm sm sm sm s s s "
+        "c c c sm sm sm sm sm sm s s s "
+        "c c c mm mm mm mc mc mc s s s "
+        "w w w mm mm mm mc mc mc s s s "
+        "w w w p p p g g g g g g "
+        "w w w p p p g g g g g g ";
+
+}
+
+#gridContainer>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 15px;
+}
+
+/* Adjust the grid items' sizes */
+#Create {
+    background-color: red;
+    /* grid-column: span 2;
+    grid-row: span 3; */
+    grid-area: c;
+}
+
+#SocialMedia {
+    background-color: yellow;
+    /* grid-column: span 6;
+    grid-row: span 2; */
+    grid-area: sm;
+}
+
+#Schedule {
+    background-color: green;
+    /* grid-column: span 2;
+    grid-row: span 4; */
+    grid-area: s;
+}
+
+#Write {
+    background-color: blue;
+    /* grid-column: 1/span 2;
+    grid-row: span 3; */
+    grid-area: w;
+}
+
+#Manage {
+    background-color: orange;
+    grid-area: mm;
+}
+
+#Maintain {
+    background-color: purple;
+    grid-area: mc;
+}
+
+#Pourcentage {
+    background-color: pink;
+    grid-area: p;
+}
+
+#Grow {
+    background-color: brown;
+    grid-area: g;
+}
+
+@media screen and (max-width: 900px) {
+
+    #gridContainer {
+        display: flex;
+        /* Switch to flexbox for more reliable stacking */
+        flex-direction: column;
+        grid-template-columns: unset;
+        grid-template-areas: unset;
+        gap: 15px;
+        width: 90%;
+        height: auto;
+        /* Allow container to grow with content */
+        max-height: 90%;
+        /* Remove max-height restriction */
+        padding: 15px;
+        /* Add padding inside the container */
+    }
+
+    /* #gridContainer {
+        grid-template-columns: 1fr;
+        grid-template-areas: none;
+    grid-auto-rows: minmax(100px, 1fr);
+    gap: 15px;
+    width: 90%;
+}
+*/
+    #Create,
+    #SocialMedia,
+    #Schedule,
+    #Write,
+    #Manage,
+    #Maintain,
+    #Pourcentage,
+    #Grow {
+        grid-area: unset;
+        grid-column: unset;
+        grid-row: unset;
+        width: 100%;
+        height: 100px;
+        margin: 0;
+        /* Reset margins */
+    }
+
+    /* Make sure all items take up the full width of their grid cell */
+    #gridContainer>div:last-child {
+        margin-bottom: 0;
+        /* Fixed height for each row on mobile */
+    }
+}
